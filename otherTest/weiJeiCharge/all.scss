@@ -7,6 +7,12 @@
 .mt-3 {
     margin-top: 18px;
 }
+
+body{
+    font-size: 24px;
+        line-height: 36px;
+}
+
 .container{
     margin: 20px auto;
     max-width: 375px;
@@ -17,7 +23,7 @@
     @include smScreen {
         max-width: 640px;
     }
-    & input{
+    & input, select{
         padding: 8px 20px;
         font-size: 24px;
         line-height: 36px;
@@ -30,8 +36,10 @@
     & .filter{
         white-space: normal;
     }
+
 }
 
 .red {
     color: red;
 }
+
