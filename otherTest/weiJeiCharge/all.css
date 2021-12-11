@@ -1,0 +1,39 @@
+.mt-3 {
+  margin-top: 18px;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 375px;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid green;
+  padding: 10px;
+}
+
+@media (min-width: 375px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+.container input {
+  padding: 8px 20px;
+  font-size: 24px;
+  line-height: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container ul li {
+  font-size: 24px;
+}
+
+.container .filter {
+  white-space: normal;
+}
+
+.red {
+  color: red;
+}
+/*# sourceMappingURL=all.css.map */
