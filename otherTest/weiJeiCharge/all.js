@@ -78,6 +78,7 @@ saveBtn.addEventListener("click", function(e){
         data.push(obj);
         showInfo.innerHTML = `<h3 class='red'>你輸入的資料是：${dataName.value}充電站，${dataCharge.value}。</h3>`;
         init();
+        dataName.value = '';
     } else {
         showInfo.innerHTML = `<h3 class='red'>請輸入 投幣式"or"免費"。</h3>`;
     }
