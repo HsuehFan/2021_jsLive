@@ -86,47 +86,17 @@ axios(urlPath).then(function(res){
     init();
     addTicketBtn.addEventListener('click', inputMessge);
     selectRegion.addEventListener('change', function(){
-        str='';
-        urlData.forEach(i => {
-            if (selectRegion.value == ""){
-                init();
-            } else if( selectRegion.value == `${i.area}`){
-                str +=`
-            <li class="ticketCard">
-            <div class="ticketCard-img">
-            <a href="#">
-                <img src="${i.imgUrl}" alt="">
-            </a>
-            <div class="ticketCard-region">${i.area}</div>
-            <div class="ticketCard-rank">${i.rate}</div>
-            </div>
-            <div class="ticketCard-content">
-            <div>
-                <h3>
-                <a href="#" class="ticketCard-name">${i.name}</a>
-                </h3>
-                <p class="ticketCard-description">
-                ${i.description}
-                </p>
-            </div>
-            <div class="ticketCard-info">
-                <p class="ticketCard-num">
-                <span><i class="fas fa-exclamation-circle"></i></span>
-                剩下最後 <span id="ticketCard-num"> ${i.group} </span> 組
-                </p>
-                <p class="ticketCard-price">
-                TWD <span id="ticketCard-price">$${i.price}</span>
-                </p>
-            </div>
-            </div>
-        </li>
-            `;
         
-        cardArea.innerHTML = str;
-            }
-        })
-    })
+        urlData.forEach(i => {
+            if(i.area == selectRegion.value){
+                searchData(selectRegion.value);
+                console.log(selectRegion.value);
+            };
+                
+            });
+        })  
 });
+
 
 // 把表單資料寫入 data 內
     function inputMessge(){
@@ -195,3 +165,44 @@ function init(){
 
 // 依地區改變 渲染資料
 
+function searchData(fileData){    
+    str='';
+    const leamon = '';
+    leamon = urlData.filter(i => {
+        if(i.area == fileData){
+        str += `
+            <li class="ticketCard">
+            <div class="ticketCard-img">
+            <a href="#">
+                <img src="${i.imgUrl}" alt="">
+            </a>
+            <div class="ticketCard-region">${i.area}</div>
+            <div class="ticketCard-rank">${i.rate}</div>
+            </div>
+            <div class="ticketCard-content">
+            <div>
+                <h3>
+                <a href="#" class="ticketCard-name">${i.name}</a>
+                </h3>
+                <p class="ticketCard-description">
+                ${i.description}
+                </p>
+            </div>
+            <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                <span><i class="fas fa-exclamation-circle"></i></span>
+                剩下最後 <span id="ticketCard-num"> ${i.group} </span> 組
+                </p>
+                <p class="ticketCard-price">
+                TWD <span id="ticketCard-price">$${i.price}</span>
+                </p>
+            </div>
+            </div>
+        </li>
+            `;
+        }
+        return str;
+    })
+    cardArea.innerHTML = leamon;
+    console.log(str);
+}
