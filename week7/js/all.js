@@ -227,10 +227,19 @@ function render_c3(){
         bindto: '#chart',
         data: {
             columns: newAry,
-            type: 'pie'
+            type: 'donut',
+            colors: {
+                台北: '#26C0C7',
+                台中: '#5151D3',
+                高雄: '#E68618'
+            }
         },
         size: {
             width: 200
+        },
+        donut: {
+            title: '套票地區比重',
+            width: 30
         }
     })
 }
