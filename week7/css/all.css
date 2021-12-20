@@ -246,6 +246,17 @@ ul, li {
   padding: 50px 0;
 }
 
+@media (max-width: 768px) {
+  .search-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .search-area .new-area {
   min-width: 450px;
   display: -webkit-box;
@@ -256,20 +267,19 @@ ul, li {
           align-items: center;
 }
 
-.search-area p {
-  color: #818A91;
-}
-
 @media (max-width: 768px) {
-  .search-area {
+  .search-area .new-area {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: space-between;
-    -ms-flex-pack: space-between;
-    justify-content: space-between;
+    flex-direction: column !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
+}
+
+.search-area p {
+  color: #818A91;
 }
 
 .regionSearch {
