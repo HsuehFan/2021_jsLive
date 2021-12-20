@@ -258,7 +258,7 @@ ul, li {
 }
 
 .search-area .new-area {
-  min-width: 450px;
+  max-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,6 +280,7 @@ ul, li {
 
 .search-area p {
   color: #818A91;
+  white-space: nowrap;
 }
 
 .regionSearch {

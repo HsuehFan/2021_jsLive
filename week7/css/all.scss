@@ -249,7 +249,7 @@ ul, li{
     margin: 0 auto;
     padding: 50px 0;
     & .new-area {
-        min-width: 450px;
+        max-width: 450px;
         display: flex;
         align-items: center;
             @media (max-width: 768px){
@@ -262,6 +262,7 @@ ul, li{
         }
     & p {
         color: #818A91;
+        white-space: nowrap;
         }
     }
 
