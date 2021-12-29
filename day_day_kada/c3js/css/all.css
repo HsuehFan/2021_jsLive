@@ -1,0 +1,47 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  padding: 20px;
+  margin: 10px auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (min-width: 960px) {
+  .container {
+    width: 50%;
+  }
+}
+
+.space {
+  margin-bottom: 50px;
+}
+/*# sourceMappingURL=all.css.map */

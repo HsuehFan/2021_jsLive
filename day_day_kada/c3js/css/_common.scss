@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+a, button {
+    cursor: pointer;
+}
+// ul, li {
+// 	list-style: none;
+// }
+
+img {
+	max-width: 100%;
+    height: auto;
+}
+
+
+
+@mixin pad{
+    @media (min-width: 768px){
+        @content;
+    }
+}
+@mixin pc{
+    @media (min-width: 960px){
+        @content;
+    }
+}
